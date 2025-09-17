@@ -69,6 +69,15 @@ sudo apt-get install -y nodejs
 
 # نصب Certbot برای SSL
 sudo apt install certbot python3-certbot-nginx -y
+
+# نصب ابزارهای ضروری برای deployment
+sudo apt install -y rsync curl wget git unzip
+```
+
+**نکته مهم:** اگر با خطای `rsync: command not found` مواجه شدید، دستور زیر را اجرا کنید:
+
+```bash
+sudo apt update && sudo apt install -y rsync curl wget git unzip
 ```
 
 ### 2. ایجاد دایرکتوری‌های لازم
@@ -196,6 +205,49 @@ sudo systemctl status nginx
 
 # بررسی وضعیت گواهی‌ها
 sudo certbot certificates
+```
+
+## عیب‌یابی (Troubleshooting)
+
+### خطای `rsync: command not found`
+
+اگر در GitHub Actions با این خطا مواجه شدید:
+
+```
+bash: line 1: rsync: command not found
+rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+```
+
+**راه‌حل:**
+1. به سرور متصل شوید و rsync را نصب کنید:
+```bash
+sudo apt update && sudo apt install -y rsync
+```
+
+2. یا اسکریپت راه‌اندازی را مجدداً اجرا کنید:
+```bash
+./server-setup.sh
+```
+
+### خطای SSH Connection
+
+اگر GitHub Actions نمی‌تواند به سرور متصل شود:
+
+1. بررسی کنید که SSH Key در GitHub Secrets درست تنظیم شده باشد
+2. مطمئن شوید که پورت 22 روی سرور باز است
+3. تست اتصال SSH:
+```bash
+ssh -i ~/.ssh/id_rsa user@your-server-ip
+```
+
+### خطای Permission Denied
+
+اگر با خطای دسترسی مواجه شدید:
+
+```bash
+# تنظیم مجوزهای صحیح
+sudo chown -R www-data:www-data /var/www/landing
+sudo chmod -R 755 /var/www/landing
 ```
 
 ## 🔄 فرآیند CI/CD

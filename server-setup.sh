@@ -40,6 +40,10 @@ check_root() {
 update_system() {
     log "Updating system packages..."
     sudo apt update && sudo apt upgrade -y
+    
+    # Install essential packages including rsync
+    log "Installing essential packages (rsync, curl, wget, git)..."
+    sudo apt install -y rsync curl wget git unzip
 }
 
 # Install Node.js

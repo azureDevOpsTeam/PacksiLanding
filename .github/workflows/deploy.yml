@@ -61,6 +61,9 @@ jobs:
         
     - name: Deploy to server
       run: |
+        # Ensure rsync is installed on the server
+        ssh -i ~/.ssh/id_rsa ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "command -v rsync || sudo apt update && sudo apt install -y rsync"
+        
         # Create deployment directory if it doesn't exist
         ssh -i ~/.ssh/id_rsa ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "mkdir -p /var/www/landing"
         
