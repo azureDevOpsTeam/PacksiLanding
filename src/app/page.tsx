@@ -145,18 +145,18 @@ export default function Home() {
       </section>
 
         {/* Features Section */}
-        <section id="features" className="relative z-20 py-20 px-6">
+        <section id="features" className="relative z-20 py-16 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['IRANSansX'] animate-fade-in-up">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-['IRANSansX'] animate-fade-in-up">
                 چرا پکسی؟
               </h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto font-['IRANSansX'] animate-fade-in-up delay-300">
-                راه‌حلی هوشمند برای تبدیل سفرهای شما به فرصت کسب درآمد
+              <p className="text-lg text-white/70 max-w-2xl mx-auto font-['IRANSansX'] animate-fade-in-up delay-300">
+                پلتفرم هوشمند حمل بسته که زندگی شما را آسان‌تر می‌کند
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Feature 1 */}
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 animate-fade-in-up delay-500">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -206,210 +206,149 @@ export default function Home() {
         </section>
 
         {/* Live Stats Section */}
-        <section className="relative z-20 py-20 px-6 bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm">
+        <section className="relative z-20 py-16 px-6 bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['IRANSansX'] animate-bounce-in">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-['IRANSansX'] animate-bounce-in">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
                   آمار زنده پکسی
                 </span>
               </h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto font-['IRANSansX'] animate-slide-up-stagger delay-300">
+              <p className="text-lg text-white/70 max-w-2xl mx-auto font-['IRANSansX'] animate-slide-up-stagger delay-300">
                 هر لحظه، کاربران ما در حال کسب درآمد و ارسال بسته هستند
               </p>
             </div>
             
-            <div className="grid md:grid-cols-4 gap-8">
-              {/* Live Stat 1 */}
-              <div className="group text-center hover-lift animate-bounce-in delay-500">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 backdrop-blur-sm border border-blue-400/30 hover-glow transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow-pulse">
-                      <svg className="w-8 h-8 text-white animate-wave" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-2 font-['IRANSansX'] animate-text-shimmer">
-                      ۱,۲۴۷
-                    </div>
-                    <div className="text-white/80 text-sm font-['IRANSansX'] group-hover:text-white transition-colors">کاربر فعال</div>
-                    <div className="absolute top-3 right-3 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="grid md:grid-cols-4 gap-6">
+              {/* Stat 1 */}
+              <div className="text-center animate-fade-in-up delay-500">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
                   </div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2 font-['IRANSansX']">
+                    ۱,۲۴۷
+                  </div>
+                  <div className="text-white/70 text-sm font-['IRANSansX']">کاربر فعال</div>
                 </div>
               </div>
 
-              {/* Live Stat 2 */}
-              <div className="group text-center hover-lift animate-bounce-in delay-700">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 backdrop-blur-sm border border-purple-400/30 hover-glow transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-300 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow-pulse">
-                      <svg className="w-8 h-8 text-white animate-particle-float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 mb-2 font-['IRANSansX'] animate-text-shimmer">
-                      ۳,۸۹۲
-                    </div>
-                    <div className="text-white/80 text-sm font-['IRANSansX'] group-hover:text-white transition-colors">بسته ارسال شده</div>
-                    <div className="absolute top-3 right-3 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-300"></div>
+              {/* Stat 2 */}
+              <div className="text-center animate-fade-in-up delay-700">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-300 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 5l7 7-7 7" />
+                    </svg>
                   </div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2 font-['IRANSansX']">
+                    ۳,۸۹۲
+                  </div>
+                  <div className="text-white/70 text-sm font-['IRANSansX']">بسته ارسال شده</div>
                 </div>
               </div>
 
-              {/* Live Stat 3 */}
-              <div className="group text-center hover-lift animate-bounce-in delay-900">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-green-500/20 to-green-600/10 backdrop-blur-sm border border-green-400/30 hover-glow transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-300 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow-pulse">
-                      <svg className="w-8 h-8 text-white animate-wave" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                      </svg>
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300 mb-2 font-['IRANSansX'] animate-text-shimmer">
-                      ۲۴۷M
-                    </div>
-                    <div className="text-white/80 text-sm font-['IRANSansX'] group-hover:text-white transition-colors">تومان درآمد</div>
-                    <div className="absolute top-3 right-3 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-500"></div>
+              {/* Stat 3 */}
+              <div className="text-center animate-fade-in-up delay-900">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-300 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
                   </div>
+                  <div className="text-3xl font-bold text-green-400 mb-2 font-['IRANSansX']">
+                    ۲۴۷M
+                  </div>
+                  <div className="text-white/70 text-sm font-['IRANSansX']">تومان درآمد</div>
                 </div>
               </div>
 
-              {/* Live Stat 4 */}
-              <div className="group text-center hover-lift animate-bounce-in delay-1100">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-orange-500/20 to-orange-600/10 backdrop-blur-sm border border-orange-400/30 hover-glow transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-yellow-300 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow-pulse">
-                      <svg className="w-8 h-8 text-white animate-particle-float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                      </svg>
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300 mb-2 font-['IRANSansX'] animate-text-shimmer">
-                      ۹۹.۲%
-                    </div>
-                    <div className="text-white/80 text-sm font-['IRANSansX'] group-hover:text-white transition-colors">موفقیت تحویل</div>
-                    <div className="absolute top-3 right-3 w-3 h-3 bg-orange-400 rounded-full animate-pulse delay-700"></div>
+              {/* Stat 4 */}
+              <div className="text-center animate-fade-in-up delay-1100">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-yellow-300 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
                   </div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2 font-['IRANSansX']">
+                    ۹۹.۲%
+                  </div>
+                  <div className="text-white/70 text-sm font-['IRANSansX']">موفقیت تحویل</div>
                 </div>
-              </div>
-            </div>
-
-            {/* Real-time indicator */}
-            <div className="text-center mt-12 animate-slide-up-stagger delay-1300">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-white/80 text-sm font-['IRANSansX']">آمار به‌روزرسانی زنده</span>
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* How it Works Section */}
-        <section id="how-it-works" className="relative z-20 py-20 px-6 bg-white/5 overflow-hidden">
+        <section id="how-it-works" className="relative z-20 py-16 px-6 bg-white/5 overflow-hidden">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['IRANSansX'] animate-bounce-in">
-                <span className="animate-text-shimmer">نحوه کار</span>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-['IRANSansX'] animate-bounce-in">
+                چطور کار می‌کند؟
               </h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto font-['IRANSansX'] animate-slide-up-stagger delay-300">
-                در سه قدم ساده شروع کنید و درآمدزایی را تجربه کنید
+              <p className="text-lg text-white/70 max-w-2xl mx-auto font-['IRANSansX'] animate-fade-in-up delay-300">
+                در سه قدم ساده، شروع به کسب درآمد کنید
               </p>
             </div>
             
-            <div className="relative">
-              {/* Connection Lines */}
-              <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 opacity-30 rounded-full animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 opacity-60 rounded-full animate-wave"></div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Step 1 */}
+              <div className="text-center animate-fade-in-up delay-500">
+                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-white font-bold text-2xl">۱</span>
+                </div>
+                
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-white mb-3 font-['IRANSansX']">
+                    عضویت
+                  </h3>
+                  <p className="text-white/70 font-['IRANSansX']">
+                    در تلگرام پکسی عضو شوید و پروفایل خود را تکمیل کنید.
+                  </p>
+                </div>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-12 relative z-10">
-                {/* Step 1 */}
-                <div className="group text-center animate-bounce-in delay-500 relative">
-                  <div className="relative">
-                    <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-125 transition-all duration-500 animate-glow-pulse shadow-2xl shadow-blue-500/30">
-                      <span className="text-white font-bold text-3xl animate-particle-float">۱</span>
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full animate-ping opacity-75"></div>
-                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-400 rounded-full animate-pulse"></div>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 hover-lift">
-                    <h3 className="text-2xl font-bold text-white mb-4 font-['IRANSansX'] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300">
-                      عضویت
-                    </h3>
-                    <p className="text-white/70 font-['IRANSansX'] group-hover:text-white/90 transition-colors duration-300">
-                      در تلگرام پکسی عضو شوید و پروفایل خود را تکمیل کنید.
-                    </p>
-                  </div>
-                  
-                  {/* Arrow to next step */}
-                  <div className="hidden md:block absolute top-12 -right-6 text-white/30 animate-wave">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </div>
+              {/* Step 2 */}
+              <div className="text-center animate-fade-in-up delay-700">
+                <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-white font-bold text-2xl">۲</span>
                 </div>
                 
-                {/* Step 2 */}
-                <div className="group text-center animate-bounce-in delay-700 relative">
-                  <div className="relative">
-                    <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-125 transition-all duration-500 animate-glow-pulse shadow-2xl shadow-green-500/30">
-                      <span className="text-white font-bold text-3xl animate-wave">۲</span>
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-ping opacity-75"></div>
-                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 hover-lift">
-                    <h3 className="text-2xl font-bold text-white mb-4 font-['IRANSansX'] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-blue-500 transition-all duration-300">
-                      انتخاب بسته
-                    </h3>
-                    <p className="text-white/70 font-['IRANSansX'] group-hover:text-white/90 transition-colors duration-300">
-                      بسته‌های مناسب مسیر سفرتان را انتخاب کنید.
-                    </p>
-                  </div>
-                  
-                  {/* Arrow to next step */}
-                  <div className="hidden md:block absolute top-12 -right-6 text-white/30 animate-wave delay-300">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </div>
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-white mb-3 font-['IRANSansX']">
+                    انتخاب بسته
+                  </h3>
+                  <p className="text-white/70 font-['IRANSansX']">
+                    بسته‌های مناسب مسیر سفرتان را انتخاب کنید.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Step 3 */}
+              <div className="text-center animate-fade-in-up delay-900">
+                <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-white font-bold text-2xl">۳</span>
                 </div>
                 
-                {/* Step 3 */}
-                <div className="group text-center animate-bounce-in delay-900 relative">
-                  <div className="relative">
-                    <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-125 transition-all duration-500 animate-glow-pulse shadow-2xl shadow-purple-500/30">
-                      <span className="text-white font-bold text-3xl animate-particle-float">۳</span>
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-400 rounded-full animate-ping opacity-75"></div>
-                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-pink-400 rounded-full animate-pulse"></div>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 group-hover:bg-white/15 transition-all duration-300 hover-lift">
-                    <h3 className="text-2xl font-bold text-white mb-4 font-['IRANSansX'] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-500 transition-all duration-300">
-                      کسب درآمد
-                    </h3>
-                    <p className="text-white/70 font-['IRANSansX'] group-hover:text-white/90 transition-colors duration-300">
-                      بسته را تحویل دهید و درآمد خود را دریافت کنید.
-                    </p>
-                  </div>
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-white mb-3 font-['IRANSansX']">
+                    کسب درآمد
+                  </h3>
+                  <p className="text-white/70 font-['IRANSansX']">
+                    بسته را تحویل دهید و درآمد خود را دریافت کنید.
+                  </p>
                 </div>
               </div>
             </div>
             
             {/* Success indicator */}
-            <div className="text-center mt-16 animate-slide-up-stagger delay-1100">
-              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm border border-white/20">
-                <div className="w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="text-center mt-12 animate-fade-in-up delay-1100">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-green-500/10 border border-green-500/20">
                 <span className="text-white font-['IRANSansX'] text-lg">شروع کنید و در کمتر از ۵ دقیقه اولین درآمد خود را کسب کنید!</span>
-                <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
               </div>
             </div>
           </div>
@@ -427,14 +366,14 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Testimonial 1 */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 animate-fade-in-up delay-500">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">ع</span>
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10 animate-fade-in-up delay-500">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">ع</span>
                   </div>
-                  <div className="mr-4">
+                  <div className="mr-3">
                     <h4 className="text-white font-bold font-['IRANSansX']">علی محمدی</h4>
                     <p className="text-white/60 text-sm font-['IRANSansX']">مسافر فعال</p>
                   </div>
@@ -442,9 +381,9 @@ export default function Home() {
                 <p className="text-white/80 font-['IRANSansX'] leading-relaxed">
                   "در سفر اصفهان توانستم ۳ بسته حمل کنم و ۲۰۰ هزار تومان درآمد کسب کردم. فوق‌العاده بود!"
                 </p>
-                <div className="flex mt-4">
+                <div className="flex mt-3">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -452,12 +391,12 @@ export default function Home() {
               </div>
               
               {/* Testimonial 2 */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 animate-fade-in-up delay-700">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">س</span>
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10 animate-fade-in-up delay-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">س</span>
                   </div>
-                  <div className="mr-4">
+                  <div className="mr-3">
                     <h4 className="text-white font-bold font-['IRANSansX']">سارا احمدی</h4>
                     <p className="text-white/60 text-sm font-['IRANSansX']">کارآفرین</p>
                   </div>
@@ -465,9 +404,9 @@ export default function Home() {
                 <p className="text-white/80 font-['IRANSansX'] leading-relaxed">
                   "پکسی کمک کرد تا محصولاتم را به شهرهای دیگر ارسال کنم. سریع و مطمئن!"
                 </p>
-                <div className="flex mt-4">
+                <div className="flex mt-3">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -475,12 +414,12 @@ export default function Home() {
               </div>
               
               {/* Testimonial 3 */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 hover:scale-105 transition-all duration-300 animate-fade-in-up delay-900">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">ر</span>
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10 animate-fade-in-up delay-900">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">ر</span>
                   </div>
-                  <div className="mr-4">
+                  <div className="mr-3">
                     <h4 className="text-white font-bold font-['IRANSansX']">رضا کریمی</h4>
                     <p className="text-white/60 text-sm font-['IRANSansX']">دانشجو</p>
                   </div>
@@ -488,9 +427,9 @@ export default function Home() {
                 <p className="text-white/80 font-['IRANSansX'] leading-relaxed">
                   "به عنوان دانشجو، پکسی کمک کرد تا هزینه سفرهایم را تأمین کنم. عالی!"
                 </p>
-                <div className="flex mt-4">
+                <div className="flex mt-3">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -503,11 +442,11 @@ export default function Home() {
         {/* FAQ Section */}
         <section className="relative z-20 py-20 px-6 bg-gradient-to-b from-white/5 to-white/10">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['IRANSansX'] animate-bounce-in">
-                <span className="animate-text-shimmer">سوالات متداول</span>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-['IRANSansX'] animate-fade-in-up">
+                سوالات متداول
               </h2>
-              <p className="text-xl text-white/80 max-w-2xl mx-auto font-['IRANSansX'] animate-slide-up-stagger delay-300">
+              <p className="text-lg text-white/70 max-w-2xl mx-auto font-['IRANSansX'] animate-fade-in-up delay-300">
                 پاسخ سوالات رایج درباره پکسی را اینجا بیابید
               </p>
             </div>
