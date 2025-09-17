@@ -37,7 +37,7 @@ export default function Home() {
       <div className="absolute inset-0 z-10 bg-slate-900/40"></div>
 
       {/* Header */}
-      <header className="relative z-20 bg-white/10 backdrop-blur-md border-b border-white/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -66,7 +66,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <section className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center pt-20">
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
@@ -316,7 +316,7 @@ export default function Home() {
         </section>
 
          {/* Footer */}
-         <footer className="relative z-20 mt-20 bg-white/5 backdrop-blur-md border-t border-white/10">
+         <footer id="contact" className="relative z-20 mt-20 bg-white/5 backdrop-blur-md border-t border-white/10">
            <div className="max-w-6xl mx-auto px-6 py-12">
              <div className="grid md:grid-cols-4 gap-8">
                {/* Logo and Description */}

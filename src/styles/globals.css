@@ -40,11 +40,12 @@
   html {
     font-family: 'IRANSansX', system-ui, sans-serif;
     direction: rtl;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply overflow-hidden;
     font-family: 'IRANSansX', system-ui, sans-serif;
+    overflow-x: hidden;
   }
 }
 
@@ -138,5 +139,17 @@
 
   .delay-2000 {
     animation-delay: 2s;
+  }
+
+  /* Fixed Header Styles */
+  .header-scrolled {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Smooth scroll offset for fixed header */
+  html {
+    scroll-padding-top: 80px;
   }
 }
