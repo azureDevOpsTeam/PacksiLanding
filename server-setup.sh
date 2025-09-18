@@ -106,6 +106,44 @@ install_certbot() {
     log "Certbot installed successfully"
 }
 
+# Setup SSL certificates
+setup_ssl() {
+    log "Setting up SSL certificates..."
+    
+    # Check if certificates already exist
+    if [ -f "/etc/letsencrypt/live/packsi.net/fullchain.pem" ]; then
+        info "SSL certificates already exist"
+        
+        # Check if they're valid
+        if openssl x509 -checkend 86400 -noout -in "/etc/letsencrypt/live/packsi.net/cert.pem" >/dev/null 2>&1; then
+            log "SSL certificates are valid"
+        else
+            warning "SSL certificates are expiring soon or invalid, renewing..."
+            sudo certbot renew --quiet
+        fi
+    else
+        log "Generating new SSL certificates..."
+        warning "Make sure your domain DNS is pointing to this server before proceeding"
+        read -p "Press Enter to continue with SSL certificate generation..."
+        
+        # Generate certificates
+        sudo certbot --nginx -d packsi.net -d www.packsi.net --non-interactive --agree-tos --email admin@packsi.net
+        
+        if [ $? -eq 0 ]; then
+            log "SSL certificates generated successfully"
+        else
+            error "Failed to generate SSL certificates"
+            info "You can run this manually later: sudo certbot --nginx -d packsi.net -d www.packsi.net"
+        fi
+    fi
+    
+    # Test automatic renewal
+    log "Testing automatic renewal..."
+    sudo certbot renew --dry-run
+    
+    log "SSL setup completed"
+}
+
 # Create directories
 create_directories() {
     log "Creating necessary directories..."
@@ -313,6 +351,7 @@ main() {
     create_directories
     setup_firewall
     generate_ssh_key
+    setup_ssl
     setup_log_rotation
     create_index_page
     

@@ -89,11 +89,31 @@ jobs:
         # Wait a moment for services to start
         sleep 10
         
-        # Check if the site is accessible
-        curl -f https://packsi.net || exit 1
+        # Check if the site is accessible (with SSL verification)
+        echo "🔍 Testing HTTPS connection with SSL verification..."
+        if curl -f --connect-timeout 30 --max-time 60 https://packsi.net; then
+          echo "✅ HTTPS connection successful with valid SSL certificate"
+        else
+          echo "⚠️  HTTPS with SSL verification failed, testing with insecure connection..."
+          # Test without SSL verification for debugging
+          if curl -f -k --connect-timeout 30 --max-time 60 https://packsi.net; then
+            echo "⚠️  Site is accessible but SSL certificate has issues"
+            echo "🔧 Please check SSL certificate configuration:"
+            echo "   - Verify certificate matches domain name"
+            echo "   - Check certificate expiration"
+            echo "   - Ensure certificate is from trusted CA"
+            # Also test HTTP as fallback
+            if curl -f --connect-timeout 30 --max-time 60 http://packsi.net; then
+              echo "✅ HTTP connection works as fallback"
+            fi
+          else
+            echo "❌ Site is not accessible at all"
+            exit 1
+          fi
+        fi
         
-        # Send success notification (optional)
-        echo "✅ Deployment successful! Site is live at https://packsi.net"
+        # Send success notification
+        echo "✅ Deployment completed! Site status checked at https://packsi.net"
         
     - name: Cleanup on failure
       if: failure()

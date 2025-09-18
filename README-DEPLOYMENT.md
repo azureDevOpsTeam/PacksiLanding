@@ -250,6 +250,76 @@ sudo chown -R www-data:www-data /var/www/landing
 sudo chmod -R 755 /var/www/landing
 ```
 
+### خطای SSL Certificate
+
+اگر با خطای گواهی SSL مواجه شدید:
+
+**خطا**: `SSL: no alternative certificate subject name matches target host name`
+**علائم**: اتصالات HTTPS با خطای تأیید گواهی ناموفق می‌شوند
+
+**راه‌حل‌ها:**
+
+**الف. بررسی وجود گواهی SSL:**
+```bash
+sudo ls -la /etc/letsencrypt/live/packsi.net/
+```
+
+**ب. اگر گواهی‌ها وجود ندارند، آن‌ها را تولید کنید:**
+```bash
+# نصب certbot در صورت عدم وجود
+sudo apt update
+sudo apt install -y certbot python3-certbot-nginx
+
+# تولید گواهی SSL
+sudo certbot --nginx -d packsi.net -d www.packsi.net
+
+# تست تمدید خودکار
+sudo certbot renew --dry-run
+```
+
+**ج. اگر گواهی‌ها وجود دارند اما نامعتبر هستند:**
+```bash
+# بررسی جزئیات گواهی
+sudo openssl x509 -in /etc/letsencrypt/live/packsi.net/cert.pem -text -noout
+
+# بررسی انقضای گواهی
+sudo certbot certificates
+
+# تمدید در صورت انقضا
+sudo certbot renew
+sudo systemctl reload nginx
+```
+
+**د. تأیید تنظیمات DNS دامنه:**
+- مطمئن شوید که رکورد A به IP سرور شما اشاره کند
+- مطمئن شوید که CNAME برای www به دامنه شما اشاره کند
+- منتظر انتشار DNS بمانید (تا 48 ساعت)
+
+**ه. تست پیکربندی SSL:**
+```bash
+# تست پیکربندی nginx
+sudo nginx -t
+
+# بررسی گواهی SSL از ابزار خارجی
+curl -vI https://packsi.net
+
+# تست با گزینه‌های خاص SSL
+curl -k -vI https://packsi.net
+```
+
+**و. رفع مشکلات رایج SSL:**
+```bash
+# راه‌اندازی مجدد nginx پس از تغییرات گواهی
+sudo systemctl restart nginx
+
+# بررسی لاگ‌های خطای nginx
+sudo tail -f /var/log/nginx/error.log
+
+# تأیید اجازه HTTPS در فایروال (پورت 443)
+sudo ufw status
+sudo ufw allow 443/tcp
+```
+
 ## 🔄 فرآیند CI/CD
 
 ### مراحل خودکار:
