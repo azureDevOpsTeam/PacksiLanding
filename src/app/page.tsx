@@ -52,6 +52,7 @@ export default function Home() {
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-white/80 hover:text-white transition-colors font-['IRANSansX']">ویژگی‌ها</a>
               <a href="#how-it-works" className="text-white/80 hover:text-white transition-colors font-['IRANSansX']">نحوه کار</a>
+              <a href="/blog" className="text-white/80 hover:text-white transition-colors font-['IRANSansX']">بلاگ</a>
               <a href="#contact" className="text-white/80 hover:text-white transition-colors font-['IRANSansX']">تماس</a>
             </nav>
             
