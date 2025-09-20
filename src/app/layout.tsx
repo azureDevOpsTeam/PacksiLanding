@@ -100,10 +100,10 @@ export default function RootLayout({
                   contactPoint: {
                     '@type': 'ContactPoint',
                     contactType: 'customer service',
-                    url: 'https://t.me/packsi_channel',
+                    url: 'https://t.me/packsibot',
                   },
                   sameAs: [
-                    'https://t.me/packsi_channel',
+                    'https://t.me/packsibot',
                   ],
                 },
               ],
